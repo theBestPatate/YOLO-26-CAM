@@ -1,12 +1,12 @@
-# EigenCAM for YOLO V12 Interpretability
+# EigenCAM for YOLO 26 Interpretability
 
-A package for applying EigenCAM and generating heatmaps for the new YOLO V12 model. Simply clone the package and import the modules to get started.
+A package for applying EigenCAM and generating heatmaps for YOLO models. Simply clone the package and import the modules to get started.
 
-The basic structure is close to [Jacob Gil&#39;s package for AI explainability](https://github.com/jacobgil/pytorch-grad-cam) and modified to be used for the YOLO V12 model.
+The basic structure is close to [Jacob Gil&#39;s package for AI explainability](https://github.com/jacobgil/pytorch-grad-cam) and modified to be used for YOLO models.
 
 ## Use Cases
 
-It can be used on YOLO V12 classification, segmentation and object detection models. It can also be used with the older models, where all you have to do is just pass the model and see it work automatically. Example notebook for V8 and V12 provided.
+It can be used on YOLO classification, segmentation and object detection models. **Now supports YOLO 26, YOLO V12, YOLO V11, YOLO V8, and older models** - all you have to do is just pass the model and see it work automatically. Example notebooks for V8, V11, and V26 provided.
 
 You can also send pull request for adding more functions to it.
 
@@ -71,7 +71,15 @@ cam = EigenCAM(model, target_layers,task='od')
 
 The default task is 'od' so it is fine even if you don't specify the task then
 
-#### Check out the Jupyter Notebook titled YOLO V12n EigenCAM to understand it better and also handle any issues.
+#### Check out the Jupyter Notebooks (YOLO V8n EigenCAM, YOLO V11 EigenCAM, and YOLO V26 EigenCAM) to understand it better and also handle any issues.
+
+## Supported YOLO Versions
+
+✅ **YOLO 26** - Latest model with full support for classification, object detection, and segmentation  
+✅ **YOLO V12** - Full support  
+✅ **YOLO V11** - Full support  
+✅ **YOLO V8** - Full support  
+✅ **Older YOLO versions** - Should work with most models
 
 ## ToDo:
 
@@ -79,6 +87,7 @@ See the [open issues](https://github.com/rigvedrs/Yolo-V8-CAM/issues) for a list
 
 - [X] Solve the issue with having to re-run the cells
 - [X] Add support for segmentation model
+- [X] Add support for YOLO 26 models
 - [ ] Add support for pose detection model
 - [ ] Solve pending issues
 
