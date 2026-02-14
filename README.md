@@ -1,6 +1,6 @@
 # EigenCAM for YOLO 26 Interpretability
 
-A package for applying EigenCAM and generating heatmaps for YOLO models. Simply clone the package and import the modules to get started.
+A package for applying EigenCAM (it is like GradCAM) and generating heatmaps for YOLO models. Simply clone the package and import the modules to get started.
 
 The basic structure is close to [Jacob Gil&#39;s package for AI explainability](https://github.com/jacobgil/pytorch-grad-cam) and modified to be used for YOLO models.
 
