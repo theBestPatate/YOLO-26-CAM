@@ -5,3 +5,4 @@ yolo_cam/utils/__pycache__
 
 models/*
 !models/.gitkeep 
+.python-version
