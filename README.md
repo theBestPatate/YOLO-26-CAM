@@ -16,31 +16,31 @@ EigenCAM is a technique that involves computing the first principle component of
 
 #### Image:
 
-<img src="images/puppies.jpg" alt="puppies" width="240" height="240">
+<img src="example/images/puppies.jpg" alt="puppies" width="240" height="240">
 
 #### GrayScale Heatmaps:
 
 | Object Detection         | Classification             | Segmentation               |
 | ------------------------ | -------------------------- | -------------------------- |
-| ![od3.png](images/od3.png) | ![cls3.png](images/cls3.png) | ![seg3.png](images/seg3.png) |
+| ![od3.png](example/images/od3.png) | ![cls3.png](example/images/cls3.png) | ![seg3.png](example/images/seg3.png) |
 
 #### Combined
 
 | Object Detection         | Classification             | Segmentation               |
 | ------------------------ | -------------------------- | -------------------------- |
-| ![od1.png](images/od1.png) | ![cls1.png](images/cls1.png) | ![cls1.png](images/seg1.png) |
+| ![od1.png](example/images/od1.png) | ![cls1.png](example/images/cls1.png) | ![cls1.png](example/images/seg1.png) |
 
 ### Object Detection model
 
-![od2.png](images/od2.png)
+![od2.png](example/images/od2.png)
 
 ### Classification model
 
-![cls2.png](images/cls2.png)
+![cls2.png](example/images/cls2.png)
 
 ### Segmentation model
 
-![seg2.png](images/seg2.png)
+![seg2.png](example/images/seg2.png)
 
 ## Getting Started
 
@@ -52,24 +52,29 @@ EigenCAM is a technique that involves computing the first principle component of
 from yolo_cam.eigen_cam import EigenCAM
 from yolo_cam.utils.image import show_cam_on_image, scale_cam_image
 ```
-
-#### Call the function and print the image (tasks supported = 'od', 'cls' and 'seg')
+#### Choose the target layers and the Yolo Model and load it on cpu
+```python
+model = YOLO('models/yolo11n-cls.pt') 
+model = model.cpu()
+target_layers =[model.model.model[-1].conv]
+```
+#### Call the function and print the image (tasks supported = 'detection', 'classification' and 'segmentation')
 
 ```python
-cam = EigenCAM(model, target_layers,task='cls')
-grayscale_cam = cam(rgb_img)[0, :, :]
-cam_image = show_cam_on_image(img, grayscale_cam, use_rgb=True)
-plt.imshow(cam_image)
-plt.show()
+with EigenCAM(model, target_layers,task='classificaton') as cam:
+    grayscale_cam = cam(rgb_img)[0, :, :]
+    cam_image = show_cam_on_image(img, grayscale_cam, use_rgb=True)
+    plt.imshow(cam_image)
+    plt.show()
 ```
 
-#### For the Object Detection Task, just change the task to 'od' and the rest is same.
+#### For the Object Detection Task, just change the task to 'detection' and the rest is same.
 
 ```python
-cam = EigenCAM(model, target_layers,task='od')
+cam = EigenCAM(model, target_layers,task='detection')
 ```
 
-The default task is 'od' so it is fine even if you don't specify the task then
+The default task is 'detection' so it is fine even if you don't specify the task then
 
 #### Check out the Jupyter Notebooks (YOLO V8n EigenCAM, YOLO V11 EigenCAM, and YOLO V26 EigenCAM) to understand it better and also handle any issues.
 
