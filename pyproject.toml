@@ -1,11 +1,12 @@
 [project]
-name = "yolo-26-cam"
+name = "yolo-cam"
 version = "0.1.0"
 description = "A package to apply EigenCAM (like GradCAM) and generating heatmap from YOLO models"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "matplotlib>=3.10.8",
+    "mkdocs-material>=9.7.1",
     "numpy>=2.4.2",
     "torch>=2.10.0",
     "torchvision>=0.25.0",
@@ -18,5 +19,9 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
+    "jupyter>=1.1.1",
+    "mkdocs>=1.6.1",
     "pytest>=9.0.2",
+    "tox-uv>=1.29.0",
+    "ultralytics>=8.4.14",
 ]
