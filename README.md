@@ -6,7 +6,7 @@ The basic structure is close to [Jacob Gil&#39;s package for AI explainability](
 
 ## Use Cases
 
-It can be used on YOLO classification, segmentation and object detection models. **Now supports YOLO 26, YOLO V12, YOLO V11, YOLO V8, and older models** - all you have to do is just pass the model and see it work automatically. Example notebooks for V8, V11, and V26 provided.
+It can be used on YOLO classification, segmentation and object detection models. **Now supports YOLO 26, YOLO V12, YOLO V11, YOLO V8, and older models** - all you have to do is just pass the model and see it work automatically. examples notebooks for V8, V11, and V26 provided.
 
 You can also send pull request for adding more functions to it.
 
@@ -16,31 +16,31 @@ EigenCAM is a technique that involves computing the first principle component of
 
 #### Image:
 
-<img src="example/images/puppies.jpg" alt="puppies" width="240" height="240">
+<img src="examples/images/puppies.jpg" alt="puppies" width="240" height="240">
 
 #### GrayScale Heatmaps:
 
 | Object Detection         | Classification             | Segmentation               |
 | ------------------------ | -------------------------- | -------------------------- |
-| ![od3.png](example/images/od3.png) | ![cls3.png](example/images/cls3.png) | ![seg3.png](example/images/seg3.png) |
+| ![od3.png](examples/images/od3.png) | ![cls3.png](examples/images/cls3.png) | ![seg3.png](examples/images/seg3.png) |
 
 #### Combined
 
 | Object Detection         | Classification             | Segmentation               |
 | ------------------------ | -------------------------- | -------------------------- |
-| ![od1.png](example/images/od1.png) | ![cls1.png](example/images/cls1.png) | ![cls1.png](example/images/seg1.png) |
+| ![od1.png](examples/images/od1.png) | ![cls1.png](examples/images/cls1.png) | ![cls1.png](examples/images/seg1.png) |
 
 ### Object Detection model
 
-![od2.png](example/images/od2.png)
+![od2.png](examples/images/od2.png)
 
 ### Classification model
 
-![cls2.png](example/images/cls2.png)
+![cls2.png](examples/images/cls2.png)
 
 ### Segmentation model
 
-![seg2.png](example/images/seg2.png)
+![seg2.png](examples/images/seg2.png)
 
 ## Getting Started
 
